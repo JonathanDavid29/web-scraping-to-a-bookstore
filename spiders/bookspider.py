@@ -9,10 +9,6 @@ class BookspiderSpider(scrapy.Spider):
     allowed_domains = ["books.toscrape.com", "proxy.scrapeops.io"]
     start_urls = ["https://books.toscrape.com"]
 
-    # def start_request(self): # Scrapy looks for this function when you start up your spider, y el primer ulr lo encode(start_urls)
-    #     yield scrapy.Request(url=self.start_urls[0], callback=self.parse)
-
-   
     def parse(self, response):
         books = response.css('article.product_pod')
         for book in books:
