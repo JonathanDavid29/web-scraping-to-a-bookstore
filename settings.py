@@ -16,7 +16,7 @@ FEEDS = {
     'data_final_test_v2.csv': {'format': 'csv'}
 }
 
-SCRAPEOPS_API_KEY = '4c9a5498-ac9c-4cec-8d7e-3ea8549e7116'
+SCRAPEOPS_API_KEY = 'YOUR_API_KEY'
 SCRAPEOPS_FAKE_USER_AGENT_ENDPOINT = 'https://headers.scrapeops.io/v1/user-agents'
 SCRAPEOPS_FAKE_USER_AGENT_ENABLED = True
 SCRAPEOPS_NUM_RESULTS = 50
@@ -78,7 +78,6 @@ DOWNLOADER_MIDDLEWARES = {
     "ultimatescraper.middlewares.ScrapeOpsFakeBrowserHeaderAgentMiddleware": 300,
     "rotating_proxies.middlewares.RotatingProxyMiddleware" : 610,
     "rotating_proxies.middlewares.BanDetectionMiddleware" : 620,
-    #"scrapeops_scrapy_proxy_sdk.scrapeops_scrapy_proxy_sdk.ScrapeOpsScrapyProxySdk": 725,
 }
 
 # Enable or disable extensions
@@ -91,7 +90,6 @@ DOWNLOADER_MIDDLEWARES = {
 # See https://docs.scrapy.org/en/latest/topics/item-pipeline.html
 ITEM_PIPELINES = {
    "ultimatescraper.pipelines.UltimatescraperPipeline": 300, 
-  #  "ultimatescraper.pipelines.SaveToMySQLPipeline": 400,
 }
 
 # Enable and configure the AutoThrottle extension (disabled by default)
